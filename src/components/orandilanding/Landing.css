@@ -56,17 +56,38 @@ footer {
   display: flex;
   list-style: none;
   justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 400;
+
+}
+.info a {
+  text-decoration: none;
+  color: rgb(6, 6, 189);
+  transition: color 0.3s;  
 }
 
 .info li {
   margin-bottom: 10px;
 }
 
+.info a:hover {
+  color: rgb(38, 170, 247);
+}
 .contacts {
     display: flex;
     justify-content: space-evenly;  
     align-items: center;  
 
+}
+
+.phone{
+    font-size: 1.2rem;
+    padding: 1%;
+    font-weight: 400;
+}
+
+.phone span{
+    font-size: 2rem;
 }
 
 .icons {
@@ -76,7 +97,6 @@ footer {
 
 .icons a {
   text-decoration: none;
-  color: inherit;
   margin-right: 10px;
   transition: color 0.3s;
   cursor: pointer;
