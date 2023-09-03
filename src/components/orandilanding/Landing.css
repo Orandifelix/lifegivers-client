@@ -69,23 +69,117 @@ footer {
 
 }
 
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 10px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
 
 .donation-links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  
-  gap: 10px; 
-  padding: 1%; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 1%;
 }
 
 .donation-button {
-  background-color: blue;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.donation-button:hover {
-  background-color: darkblue;
+.blood {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+
+.organs {
+  background-color: white;
+  color: green;
+  border: 1px solid green;
+}
+
+.organs:hover {
+  background-color:green ;
+  color: white;
+  border: 1px solid green;
+}
+
+.tissues {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+}
+
+.tissues:hover {
+  background-color:blue ;
+  color: white;
+  border: 1px solid blue;
+}
+
+.platelets {
+  background-color: white;
+  color: orange;
+  border: 1px solid orange;
+}
+
+.platelets:hover {
+  background-color:  orange ;
+  color:white;
+  border: 1px solid orange;
+}
+
+.cord-blood {
+  background-color: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.cord-blood:hover {
+  background-color: purple;
+  color: white;
+  border: 1px solid purple;
+}
+
+
+.bone-marrow {
+  background-color: white;
+  color: brown;
+  border: 1px solid brown;
+}
+
+.blood:hover {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+}
+
+
+.bone-marrow:hover {
+  background-color: brown ;
+  color:white;
+  border: 1px solid brown;
+}
+
+
+.copyright {
+  text-align: center;
+  color: rgb(78, 72, 72);
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
 }
