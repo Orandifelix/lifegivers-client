@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <h1>LifeGivers Website</h1>
       <Landing />
       <Footer />
     </div>

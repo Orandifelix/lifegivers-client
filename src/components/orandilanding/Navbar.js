@@ -8,17 +8,18 @@ const Navbar = () => {
   return (
     <nav>
       <div className="logo">
+        <div></div>
         <span>
-          <RiHandHeartFill size="2em" color="red" />{" "}
+          <RiHandHeartFill size="2em" color="red" />
         </span>
-        Do Something Amazing.
-        <br /> Donate to save life
+        <h3>Do Something Amazing.<br/> Donate to save life</h3>
+        <h1>LifeGivers</h1>
       </div>
       <ul className="links">
-        <li >About Us</li>
-        <li >Who Can Donate</li>
-        <li >Where to Donate</li>
-        <li >Articles</li>
+        <li>About Us</li>
+        <li>Who Can Donate</li>
+        <li>Where to Donate</li>
+        <li>Articles</li>
         <li>Become a Donor</li>
       </ul>
     </nav>
