@@ -1,0 +1,35 @@
+/* Navbar styles */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: center; 
+ 
+}
+
+.logo {
+  display: flex; 
+  align-items: center; 
+  background-color: white;
+  color: rgb(246, 164, 17);
+  text-align: start;
+  font-weight: 600;
+  padding: 1%;
+}
+
+.logo span {
+  margin-right: 1rem; 
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;  
+  background-color: blue;  
+  padding: 10px 0;  
+}
+
+.links li {
+  color: white; 
+  font-weight: 400; 
+}
