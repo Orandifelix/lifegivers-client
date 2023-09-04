@@ -1,11 +1,15 @@
 import React from 'react'
-import "./Landing.css"
+import "./Landing.css";
 import { RiHandHeartFill } from "react-icons/ri";
-// import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Landing from './Landing';
+import SignUpLoginComponent from '../kevinauth/SignUpLogin';
 
 
 const Navbar = () => {
   return (
+    <>
+    <Router>
     <nav>
       <div className="logo">
         <div></div>
@@ -19,13 +23,21 @@ const Navbar = () => {
         <h1>LifeGivers</h1>
       </div>
       <ul className="links">
-        <li>About Us</li>
-        <li>Who Can Donate</li>
-        <li>Where to Donate</li>
-        <li>Articles</li>
-        <li>Become a Donor</li>
+        <Link to="/"><li>Home</li></Link>
+        <Link to="/"><li>About Us</li></Link>
+        <Link to="/"><li>Who Can Donate</li></Link>
+        <Link to="/"><li>Where to Donate</li></Link>
+        <Link to="/"><li>Articles</li></Link>
+        <Link to="/"><li>Become a Donor</li></Link>
+        <Link to="/login">&#128578;</Link>
       </ul>
     </nav>
+      <Routes>
+        <Route path="/login" element={<SignUpLoginComponent />} />
+        <Route exact path="/" element={<Landing />} />
+      </Routes>
+    </Router>
+    </>
   );
 }
 
