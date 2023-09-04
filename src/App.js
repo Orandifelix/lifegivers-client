@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <Landing />
-      <hr class="horizontal-line"/>
+      <hr className="horizontal-line"/>
 
       <Footer />
     </div>
