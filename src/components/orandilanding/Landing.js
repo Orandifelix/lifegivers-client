@@ -1,9 +1,22 @@
 import React from 'react'
+import './Landing.css'
+import Landingimg from './landitems/Landingimg'
+import Landingcard from './landitems/Landingcard';
 
 const Landing = () => {
   return (
-    <div>Landing</div>
-  )
+    <div className="landing">
+      <Landingimg />
+      <div className="card-container">
+        <Landingcard />
+        <Landingcard />
+        <Landingcard />
+        <Landingcard />
+        <Landingcard />
+        <Landingcard />
+      </div>
+    </div>
+  );
 }
 
 export default Landing

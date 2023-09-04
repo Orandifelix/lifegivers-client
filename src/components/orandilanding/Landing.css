@@ -11,14 +11,14 @@ nav {
   align-items: center;
   background-color: white;
   color: rgb(246, 164, 17);
-  justify-content: start;
+  /* justify-content: start; */
   font-weight: 600;
   margin-left: 2%;
 }
 
 .logo span {
   margin-right: 0.1rem;
-  padding: 0.9%;
+  padding: 0.8%;
 }
 
 .logo h1 {
@@ -34,6 +34,7 @@ nav {
   list-style: none;
   background-color: blue;
   padding: 10px 0;
+  margin: 0;
 }
 
 .links li {
@@ -49,7 +50,7 @@ footer {
   justify-content: space-between;
   background-color: rgb(244, 244, 244);
   color: rgb(48, 43, 43);
-  padding: 20px;
+  padding: 2%;
 }
 
 .info {
@@ -88,6 +89,7 @@ footer {
 
 .phone span{
     font-size: 2rem;
+    font-weight: 600;
 }
 
 .icons {
@@ -101,7 +103,6 @@ footer {
   transition: color 0.3s;
   cursor: pointer;
 }
-
 
 .donation-links {
   display: grid;
@@ -202,4 +203,13 @@ footer {
   padding: 10px;
   font-weight: 600;
   font-size: 1rem;
+}
+
+
+/* Landing */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;  
 }

@@ -8,6 +8,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <Landing />
+      <hr class="horizontal-line"/>
+
       <Footer />
     </div>
   );

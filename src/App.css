@@ -1,4 +1,16 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+   min-height: 100vh;
 }
 
+.landing{
+  flex-grow: 1;
+}
+
+.horizontal-line {
+  border: none;  
+  height: 6px; 
+  background-color:rgb(0,0,255);  
+  margin: 0px 0;  
+}

@@ -1,0 +1,60 @@
+.landing-container {
+  position: relative;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(100, 100, 100, 0.6);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* Cards */
+
+.landing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.landing-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.landing-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.landing-card p {
+  margin-bottom: 10px;
+}
+
+.landing-card button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.landing-card button:hover {
+  background-color: darkblue;
+}

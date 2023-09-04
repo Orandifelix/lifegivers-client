@@ -10,9 +10,12 @@ const Navbar = () => {
       <div className="logo">
         <div></div>
         <span>
-          <RiHandHeartFill size="2em" color="red" />
+          <RiHandHeartFill size="2em" color="rgb(216,30,5)" />
         </span>
-        <h3>Do Something Amazing.<br/> Donate to save life</h3>
+        <h3>
+          Do Something Amazing.
+          <br /> Donate to save life
+        </h3>
         <h1>LifeGivers</h1>
       </div>
       <ul className="links">
