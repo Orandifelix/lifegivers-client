@@ -1,10 +1,12 @@
 import React from 'react'
 import './Landing.css'
-import Landingimg from './landitems/Landingimg'
+import Landingimg from './landitems/Landingimg';
 import Landingcard from './landitems/Landingcard';
+import Footer from "./Footer"
 
 const Landing = () => {
   return (
+    <>
     <div className="landing">
       <Landingimg />
       <div className="card-container">
@@ -16,6 +18,8 @@ const Landing = () => {
         <Landingcard />
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 
