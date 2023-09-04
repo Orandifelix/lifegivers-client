@@ -20,7 +20,6 @@
   text-align: center;
 }
 
-
 /* Cards */
 
 .landing-card {
@@ -47,14 +46,18 @@
 }
 
 .landing-card button {
-  background-color: blue;
-  color: white;
+  background-color: white;
+  color: blue;
   border: none;
+  border-bottom: 2px solid blue;
+  width: 100%;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
 .landing-card button:hover {
-  background-color: darkblue;
+  background-color: blue;
+  color: white;
 }
