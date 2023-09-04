@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+// import Navbar from "../orandilanding/Navbar";
 
 class SignUpLoginComponent extends Component {
   constructor(props) {
@@ -81,6 +82,8 @@ class SignUpLoginComponent extends Component {
     const { isSignUp } = this.state;
 
     return (
+      <>
+      {/* <Navbar /> */}
       <Container>
         <br />
         <Row className="justify-content-center">
@@ -196,6 +199,8 @@ class SignUpLoginComponent extends Component {
           </Col>
         </Row>
       </Container>
+      <br />
+      </>
     );
   }
 }
