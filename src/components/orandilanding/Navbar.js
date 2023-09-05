@@ -1,15 +1,10 @@
 import React from 'react'
 import "./Landing.css";
 import { RiHandHeartFill } from "react-icons/ri";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Landing from './Landing';
-import SignUpLoginComponent from '../kevinauth/SignUpLogin';
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <>
-    <Router>
     <nav>
       <div className="logo">
         <div></div>
@@ -24,7 +19,7 @@ const Navbar = () => {
       </div>
       <ul className="links">
         <Link to="/"><li>Home</li></Link>
-        <Link to="/"><li>About Us</li></Link>
+        <Link to="/aboutus"><li>About Us</li></Link>
         <Link to="/"><li>Who Can Donate</li></Link>
         <Link to="/"><li>Where to Donate</li></Link>
         <Link to="/"><li>Articles</li></Link>
@@ -32,12 +27,6 @@ const Navbar = () => {
         <Link to="/login">&#128578;</Link>
       </ul>
     </nav>
-      <Routes>
-        <Route path="/login" element={<SignUpLoginComponent />} />
-        <Route exact path="/" element={<Landing />} />
-      </Routes>
-    </Router>
-    </>
   );
 }
 
