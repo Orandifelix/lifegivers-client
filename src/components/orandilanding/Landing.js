@@ -3,6 +3,8 @@ import './Landing.css'
 import Landingimg from './landitems/Landingimg';
 import Landingcard from './landitems/Landingcard';
 import Footer from "./Footer"
+import Aboutus from './landitems/Aboutus';
+
 
 
 const Landing = () => {
@@ -17,6 +19,7 @@ const Landing = () => {
         <Landingcard />
         <Landingcard />
         <Landingcard />
+        <Aboutus/>
       </div>
     </div>
     <Footer />
