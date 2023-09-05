@@ -1,17 +1,23 @@
 import './App.css';
-import Footer from './components/orandilanding/Footer';
+import SignUpLoginComponent from './components/kevinauth/SignUpLogin';
 import Landing from './components/orandilanding/Landing';
 import Navbar from './components/orandilanding/Navbar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Aboutus from './components/orandilanding/landitems/Aboutus';
+import Footer from './components/orandilanding/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <Router className="App">
       <Navbar/>
-      <Landing />
-      <hr class="horizontal-line"/>
-
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/login" element={<SignUpLoginComponent/>}/>
+        <Route path='/' element={<Landing/>}/>
+        <Route path='/aboutus' element={<Aboutus/>}/>
+      </Routes>
+      <hr className="horizontal-line"/>
+      <Footer/>
+    </Router>
   );
 }
 

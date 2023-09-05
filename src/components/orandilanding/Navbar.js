@@ -1,8 +1,7 @@
 import React from 'react'
-import "./Landing.css"
+import "./Landing.css";
 import { RiHandHeartFill } from "react-icons/ri";
-// import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -19,11 +18,13 @@ const Navbar = () => {
         <h1>LifeGivers</h1>
       </div>
       <ul className="links">
-        <li>About Us</li>
-        <li>Who Can Donate</li>
-        <li>Where to Donate</li>
-        <li>Articles</li>
-        <li>Become a Donor</li>
+        <Link to="/"><li>Home</li></Link>
+        <Link to="/aboutus"><li>About Us</li></Link>
+        <Link to="/"><li>Who Can Donate</li></Link>
+        <Link to="/"><li>Where to Donate</li></Link>
+        <Link to="/"><li>Articles</li></Link>
+        <Link to="/"><li>Become a Donor</li></Link>
+        <Link to="/login">&#128578;</Link>
       </ul>
     </nav>
   );
