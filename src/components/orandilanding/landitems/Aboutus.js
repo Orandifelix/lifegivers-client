@@ -1,7 +1,13 @@
 import React from "react";
-import "./Aboutus.css";  
+import "./Aboutus.css";
+import Teamcard from "./Teamcard";
+import TeamData from "../data.json";
+import Extralinks from "./Extralinks";
 
 const Aboutus = () => {
+  const teams = TeamData.teams;
+  const extralinks =TeamData.extralinks
+
   return (
     <>
       <div className="about-us-container">
@@ -34,6 +40,38 @@ const Aboutus = () => {
           continually advancing treatments and processes to enhance healthcare
           and offer renewed hope."
         </blockquote>
+      </div>
+      <div className="team">
+        <h3 className="our-team">The Team</h3>
+        <div className="team-cards-container">
+          {teams.map((team) => (
+            <Teamcard
+              key={team.id}
+              name={team.name}
+              title={team.title}
+              story={team.story}
+              quote={team.quote}
+              avatar={team.avatar}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="aboutus-links">
+        {extralinks.map((extralink) => (
+          <Extralinks
+            key={extralink.id}
+            title={extralink.title}
+            shortText={extralink.shortText}
+            link={extralink.link}
+          />
+        ))}
+      </div>
+      <hr className="horizontal"/>
+      <h3 className="interest"> You may also be interested in:</h3>
+      <div className="interest-buttons">
+        <button >How We Help</button>
+        <button> Partnering With Us</button>
+        <button>Careers</button>
       </div>
     </>
   );
