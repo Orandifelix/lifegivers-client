@@ -22,7 +22,7 @@ const Navbar = () => {
           <li>Home</li>
         </Link>
         <Link to="/aboutus">
-          <li>About Us</li>
+          <li>Who we are</li>
         </Link>
         <Link to="/">
           <li>Who Can Donate</li>

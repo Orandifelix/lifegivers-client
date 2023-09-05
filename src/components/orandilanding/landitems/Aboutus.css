@@ -1,0 +1,59 @@
+.about-us-container {
+  max-height: 350px;
+  overflow: hidden; 
+  position: relative;  
+}
+
+.image-container {
+  position: relative;  
+}
+
+.about-us-image {
+  width: 100%;
+
+}
+
+.image-text {
+  position: absolute;
+  top: 14%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);  
+  color: white;
+  padding: 8px;
+  margin: auto;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+.image-text span{
+    color: red;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.about-card {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
