@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import "./Landing.css";
 import { RiHandHeartFill } from "react-icons/ri";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -18,16 +18,27 @@ const Navbar = () => {
         <h1>LifeGivers</h1>
       </div>
       <ul className="links">
-        <Link to="/"><li>Home</li></Link>
-        <Link to="/aboutus"><li>About Us</li></Link>
-        <Link to="/"><li>Who Can Donate</li></Link>
-        <Link to="/"><li>Where to Donate</li></Link>
-        <Link to="/"><li>Articles</li></Link>
-        <Link to="/"><li>Become a Donor</li></Link>
-        <Link to="/login">&#128578;</Link>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/aboutus">
+          <li>Who we are</li>
+        </Link>
+        <Link to="/">
+          <li>Who Can Donate</li>
+        </Link>
+        <Link to="/">
+          <li>Where to Donate</li>
+        </Link>
+        <Link to="/">
+          <li>Articles</li>
+        </Link>
+        <Link to="/login">
+          <li>Become a Donor&#128578;</li>
+        </Link>
       </ul>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

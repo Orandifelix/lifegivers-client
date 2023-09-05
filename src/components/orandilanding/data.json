@@ -1,0 +1,103 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "title": "Organisation Development Consultant - Talent and Leadership",
+      "name": "Dr. Leila Otieno",
+      "avatar": "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "story": "I have dedicated 16 years of my career to LifeGivers in Kenya. I began as a Trainee Medical Laboratory Scientific Officer (MLSO) and steadily advanced to the role of Biomedical Scientist. Over time, I assumed the position of MLSO 2 in Research and Development, followed by leadership roles as a Team Manager in Histocompatibility and Immunogenetics and later in Red Cell Immunohaematology. I was subsequently seconded into an Organization Development Manager role. My journey with LifeGivers commenced when a friend introduced me to the blood bank at our Aghakhan facility in Nairobi. After interviews with both LifeGivers and a hospital laboratory, I knew without a doubt that LifeGivers was the place for me due to the warm and supportive atmosphere I encountered.",
+      "quote": "'I relish having the chance to engage with individuals and teams across the organisation to give them recognition and my personal thanks for what they are doing to save and improve lives.'"
+    },
+    {
+      "id": 2,
+      "title": "Transport and Logistics Manager",
+      "name": "Sir. Eric Mong'are",
+      "avatar": "https://images.unsplash.com/photo-1618498082410-b4aa22193b38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "story": "My journey with LifeGivers began in the payroll department, where I started as a house porter, responsible for distributing payslips across different regions. Over time, I transitioned to the Transport office, progressing from Trainee Computer Operator to eventually becoming the Transport and Logistics Manager. In this role, our team plays a pivotal role in the collection and transportation of vital donations and even the transportation of donors themselves.  What sets us apart is our unique responsibility for both equipment transportation and the donated resources during donor session setups, ultimately contributing to our mission of saving lives across Kenya.",
+      "quote": "'I’ve been here 21 years and couldn’t imagine working anywhere else.'"
+    },
+    {
+      "id": 3,
+      "title": "Research Manager",
+      "name": "Dr. Susan Mutiso",
+      "avatar": "https://images.unsplash.com/photo-1643297654526-d78132dfd25d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "story": "I am part of a research team at LifeGivers, and we are leading the charge in pioneering revolutionary research. Our focus is on cultivating red blood cells within a laboratory setting for human transfusions, marking a historic moment in medical science. It's essential to clarify that our innovative approach is not a replacement for traditional blood donations. Instead, we target specific patient groups like those grappling with Sickle Cell Anemia. Our lab-grown cells closely match individual patient needs, reducing exposure risks to various blood group antigens. This breakthrough could potentially reduce the frequency of procedures, significantly improving patients' quality of life.",
+      "quote": "'The aim of our research is to help a niche group of patients have a better quality of life. Not to replace donations.'"
+    },
+    {
+      "id": 4,
+      "title": "Computer Operations Manager",
+      "name": "Prof Kelvin Kinyajui ",
+      "avatar": "https://images.unsplash.com/photo-1581092916357-5896ebc48073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "story": " I play a pivotal role in ensuring the seamless operation of our systems. I am committed to providing donors with the best possible experience by maintaining and optimizing our computer systems. My mission is to ensure that everyone within our organization is well-versed in utilizing these systems effectively. By doing so, we empower our team to continue their life-saving work with efficiency and precision, ultimately making a meaningful impact on the lives we touch.",
+      "quote": "'We all play a role in helping donors have the best experience, and we need to make sure everyone knows how to use our systems.'"
+    },
+    {
+      "id": 5,
+      "title": "Donor Welfare Manager",
+      "name": "Dr. Rhona Joy",
+      "avatar": "https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "story": "I have been an integral part of the LifeGivers team, serving as the Donor Welfare Manager. With my dedication and compassion, I ensure that our donors have the best possible experience and support throughout their journey. My commitment to donor welfare goes beyond the immediate donation process, as I play a crucial role in providing care and assistance to our generous donors. My unwavering dedication to our mission has made a significant impact on the lives we touch.",
+      "quote": "'I believe that donors are the lifeblood of our organization, and their welfare is of utmost importance. Together, we can continue to save lives and make a positive difference in our community.'"
+    },
+
+    {
+      "id": 6,
+      "title": "Founder",
+      "name": "Dr. Orandi Felix",
+      "avatar": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "story": "In 2001, I founded LifeGivers, a Kenyan-based charity dedicated to addressing blood shortages within the African and Kenyan communities. The inception of our mission began with Blood for Life, aimed at raising awareness and engaging communities in blood donation. With invaluable support from the National Health Service Blood and Transplant (NHSBT), we've expanded our services to include tissues, cord blood, organs, bone marrow, and platelets. Our commitment to saving lives and ensuring a steady supply of life-saving resources remains unwavering.",
+      "quote": "'The gift of life is the most precious one can give. Join us in making a difference and giving hope to those in need.'"
+    }
+  ],
+  "extralinks": [
+    {
+      "id": 1,
+      "title": "Diversity and Inclusion",
+      "shortText": "We are working hard to make sure we embrace the face of the communities we serve.",
+      "link": "https://www.lifegivers.org/diversity-inclusion"
+    },
+    {
+      "id": 2,
+      "title": "Community Engagement",
+      "shortText": "Learn about our efforts to engage with local communities.",
+      "link": "https://www.lifegivers.org/community-engagement"
+    },
+    {
+      "id": 3,
+      "title": "Equity in Healthcare",
+      "shortText": "Discover our commitment to achieving equity in healthcare services.",
+      "link": "https://www.lifegivers.org/equity-healthcare"
+    },
+    {
+      "id": 4,
+      "title": "Inclusivity Initiatives",
+      "shortText": "Explore our initiatives aimed at creating an inclusive environment for all.",
+      "link": "https://www.lifegivers.org/inclusivity-initiatives"
+    },
+    {
+      "id": 5,
+      "title": "Our Policies and Values",
+      "shortText": "Discover our policies and values that guide our mission and operations.",
+      "link": "https://www.lifegivers.org/policies-values"
+    },
+    {
+      "id": 6,
+      "title": "Join Our Diversity Council",
+      "shortText": "Find out how you can become part of our Diversity Council and contribute to our inclusivity efforts.",
+      "link": "https://www.lifegivers.org/join-diversity-council"
+    },
+        {
+      "id": 8,
+      "title": "Explore Our Strategy",
+      "shortText": "Learn about our strategic approach to achieving our mission and vision.",
+      "link": "https://www.lifegivers.org/explore-strategy"
+    },
+    {
+      "id": 9,
+      "title": "Partnership Opportunities",
+      "shortText": "Explore partnership opportunities and how you can collaborate with us.",
+      "link": "https://www.lifegivers.org/partnership-opportunities"
+    }
+  ]
+}

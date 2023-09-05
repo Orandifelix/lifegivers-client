@@ -8,6 +8,10 @@
   flex-grow: 1;
 }
 
+/* .about-us-container{
+  flex-grow: 1;
+} */
+
 .horizontal-line {
   border: none;  
   height: 6px; 
