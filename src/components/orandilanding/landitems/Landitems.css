@@ -20,6 +20,18 @@
   text-align: center;
 }
 
+.caption h1{
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin:   auto;
+}
+
+.caption h1 span{
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
 /* Cards */
 
 .landing-card {
