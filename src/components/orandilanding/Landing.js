@@ -1,7 +1,11 @@
 import React from 'react'
 import './Landing.css'
-import Landingimg from './landitems/Landingimg'
-import Landingcard from './landitems/Landingcard';
+import Landingimg from './landitems/Landingimg';
+import Landingcard from './landitems/Landingcard'
+// import Footer from "./Footer"
+
+
+
 
 const Landing = () => {
   return (
