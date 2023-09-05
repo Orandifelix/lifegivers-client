@@ -1,11 +1,7 @@
 import React from 'react'
 import './Landing.css'
-import Landingimg from './landitems/Landingimg';
-import Landingcard from './landitems/Landingcard'
-// import Footer from "./Footer"
-
-
-
+import Landingimg from './landitems/Landingimg'
+import Landingcard from './landitems/Landingcard';
 
 const Landing = () => {
   return (
@@ -19,6 +15,7 @@ const Landing = () => {
         <Landingcard />
         <Landingcard />
         <Landingcard />
+        <Aboutus/>
       </div>
     </div>
     {/* <Footer /> */}
