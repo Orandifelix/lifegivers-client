@@ -15,7 +15,6 @@ const Landing = () => {
         <Landingcard />
         <Landingcard />
         <Landingcard />
-        <Aboutus/>
       </div>
     </div>
     {/* <Footer /> */}
