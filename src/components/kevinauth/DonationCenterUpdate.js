@@ -110,6 +110,7 @@ function DonationCenterUpdate() {
                 className={`list-group-item ${
                   center.id === selectedCenterId ? 'active' : ''
                 }`}
+                style={{ cursor: 'pointer' }}
                 onClick={() => handleSelectCenter(center.id)}
               >
                 {center.name}
