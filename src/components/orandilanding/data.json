@@ -87,7 +87,7 @@
       "shortText": "Find out how you can become part of our Diversity Council and contribute to our inclusivity efforts.",
       "link": "https://www.lifegivers.org/join-diversity-council"
     },
-        {
+    {
       "id": 8,
       "title": "Explore Our Strategy",
       "shortText": "Learn about our strategic approach to achieving our mission and vision.",
@@ -98,6 +98,51 @@
       "title": "Partnership Opportunities",
       "shortText": "Explore partnership opportunities and how you can collaborate with us.",
       "link": "https://www.lifegivers.org/partnership-opportunities"
+    }
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Who We Are",
+      "description": "At LifeGivers, we are a dedicated team of individuals committed to saving lives through various life-giving services. Learn more about our mission and values.",
+      "image": "https://images.unsplash.com/photo-1612277795259-607df5c06e6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "link": "/aboutus"
+    },
+    {
+      "id": 2,
+      "title": "Who Can Donate",
+      "description": "Discover who is eligible to become a donor and how you can contribute to our life-saving efforts. Find out if you meet the requirements to make a difference.",
+      "image": "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1451&q=80",
+      "link": "/aboutus"
+    },
+    {
+      "id": 3,
+      "title": "Where to Donate",
+      "description": "Explore our donation centers and facilities, located in different regions. Find a convenient location near you to make your contribution.",
+      "image": "https://images.unsplash.com/photo-1591635579375-b3fadafc58ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+      "link": "/aboutus"
+    },
+    {
+      "id": 4,
+      "title": "When You Can Donate",
+      "description": "Learn about our donation schedules and the best times to make your donation. Find out how you can fit blood, organ, and other donations into your busy life.",
+      "image": "https://images.unsplash.com/photo-1579154341098-e4e158cc7f55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80",
+      "link": "/login"
+    },
+    {
+      "id": 5,
+      "title": "Stories About Our Donations",
+      "description": "Read heartwarming stories from donors, recipients, and our team. Discover the impact of your donations and the lives you've touched.",
+      "image": "https://images.unsplash.com/photo-1666214277730-e9c7e755e5a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "link": "/aboutus"
+    },
+    {
+      "id": 6,
+      "title": "Donating During Coronavirus",
+      "description": "Get information on how we have adapted our donation processes to ensure safety during the COVID-19 pandemic. Learn about the precautions we take to protect donors and recipients.",
+      "image": "https://images.unsplash.com/photo-1616390865493-ef36c0680870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "link": "/aboutus"
     }
   ]
 }

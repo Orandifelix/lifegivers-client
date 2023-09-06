@@ -2,8 +2,11 @@ import React from "react";
 import "./Landing.css";
 import Landingimg from "./landitems/Landingimg";
 import Landingcard from "./landitems/Landingcard";
+import SectionData from "./data.json";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
+  const sections = SectionData.sections;
   return (
     <>
       <div className="landing">
@@ -16,7 +19,9 @@ const Landing = () => {
               Every donation counts and brings hope. Be part of our life-saving
               mission and make a difference.
             </p>
-            <button>Sign Up Now</button>
+            <Link to="/login">
+              <button>Sign Up</button>
+            </Link>
           </div>
 
           <div className="card card2">
@@ -26,7 +31,9 @@ const Landing = () => {
               Continue your journey of saving lives with us. Sign in to make
               your next donation.
             </p>
-            <button>Sign In</button>
+            <Link to="/login">
+              <button>Sign In</button>
+            </Link>
           </div>
           <div class="card card3">
             <img
@@ -60,12 +67,15 @@ const Landing = () => {
           </div>
         </div>
         <div className="card-container">
-          <Landingcard />
-          <Landingcard />
-          <Landingcard />
-          <Landingcard />
-          <Landingcard />
-          <Landingcard />
+          {sections.map((section) => (
+            <Landingcard
+              key={section.id}
+              title={section.title}
+              description={section.description}
+              image={section.image}
+              link={section.link}
+            />
+          ))}
         </div>
       </div>
     </>

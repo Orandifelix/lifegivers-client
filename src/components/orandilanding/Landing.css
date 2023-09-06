@@ -214,11 +214,43 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;  
+  padding: 1.5%;
+  background-color: #faf9f9;
 }
 
 
+.landing-card-link {
+  background-color: #f3efef;
+  border-radius: 10px;
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
 
-/* firt cards */
+.landing-card-link:hover {
+  color: #ff4242;
+  /* text-decoration: underline;  */
+  background-color: rgb(217,238,247);
+}
+
+.landing-card h4{
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.landing-card p{
+  margin: auto;
+  font-size: 01rem;
+  font-weight: 300;
+}
+
+.landing-card img{
+ padding: 0%;
+
+}
+
+
+/* first cards */
 
 .cards-container {
   display: grid;
@@ -245,9 +277,6 @@ footer {
   border-radius: 50%;
 }
 
-/* .card:hover {
-  transform: scale(1.1); 
-} */
 
 .card:hover {
   transform: scale(98%) translateZ(0); 
@@ -282,6 +311,7 @@ footer {
   color: white;
   padding: 5px;
   font-weight: 600;
+  width: 90%;
 }
 
 .card1 button:hover{
@@ -304,6 +334,7 @@ footer {
   color: white;
   padding: 5px;
   font-weight: 600;
+  width: 90%;
 }
 
 .card2 button:hover{
