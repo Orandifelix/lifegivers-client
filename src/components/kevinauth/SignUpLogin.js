@@ -1,121 +1,121 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 
-class SignUpLoginComponent extends Component {
-  constructor(props) {
-    super(props);
+function SignUpLoginComponent() {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    name: "",
+    gender: "",
+    age: "",
+    weight: "",
+    email: "",
+    contact_number: "",
+    isSignUp: true,
+    errors: [],
+  });
 
-    this.state = {
-      username: "",
-      password: "",
-      name: "",
-      gender: "",
-      age: "",
-      weight: "",
-      email: "",
-      contact_number: "",
-      isSignUp: true,
-      error: null,
-    };
-  }
+  const { username, password, name, gender, age, weight, email, contact_number, isSignUp, errors } = formData;
 
-  handleChange = (event) => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
-    this.setState({ [name]: value });
+    setFormData({ ...formData, [name]: value });
   };
 
-  handleSubmit = async (event) => {
+  const nav = useNavigate();
+  const handleSubmit = (event) => {
     event.preventDefault();
-    try {
-      if (this.state.isSignUp) {
-        const userData = {
-          user: {
-            username: this.state.username,
-            password: this.state.password,
-            name: this.state.name,
-            gender: this.state.gender,
-            age: this.state.age,
-            weight: this.state.weight,
-            email: this.state.email,
-            contact_number: this.state.contact_number,
-          },
-        };
 
-        const response = await fetch('http://localhost:3000/users', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userData),
+    if (isSignUp) {
+      // Handle signup
+      const userData = {
+        user: {
+          username,
+          password,
+          name,
+          gender,
+          age,
+          weight,
+          email,
+          contact_number,
+        },
+      };
+
+      fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.errors) {
+            // Handle errors from the backend
+            setFormData({ ...formData, errors: data.errors });
+          } else {
+            // Signup successful, do something with data
+            console.log(data);
+            setFormData({ ...formData, isSignUp: !isSignUp, errors: [] });
+          }
+        })
+        .catch((error) => {
+          // Handle and store other errors
+          console.error('Error:', error);
         });
+    } else {
+      // Handle login
+      const loginData = {
+        username,
+        password,
+      };
 
-        if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(errorData.message || 'Failed to sign up');
-        }
-
-        // Reset form and clear errors on success
-        this.setState({
-          name: "",
-          gender: "",
-          age: "",
-          weight: "",
-          email: "",
-          contact_number: "",
-          error: null,
+      fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.error) {
+            // Handle custom error message from the backend
+            setFormData({ ...formData, errors: [data.error] });
+          } else {
+            // Login successful
+            console.log(data);
+            nav('/');
+          }
+        })
+        .catch((error) => {
+          // Handle and store other errors
+          console.error('Error:', error);
         });
-
-        console.log('Sign up successful');
-      } else {
-        const loginData = {
-          username: this.state.username,
-          password: this.state.password,
-        };
-
-        const response = await fetch('http://localhost:3000/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(loginData),
-        });
-
-        if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(errorData.message || 'Failed to log in');
-        }
-
-        // Reset form and clear errors on success
-        this.setState({
-          password: "",
-          error: null,
-        });
-
-        console.log('Log in successful');
-      }
-    } catch (error) {
-      // Handle and store errors
-      this.setState({ error: error.message });
-      console.error('Error:', error);
     }
   };
 
-  toggleForm = () => {
-    this.setState((prevState) => ({ isSignUp: !prevState.isSignUp }));
+  const toggleForm = () => {
+    setFormData({ ...formData, isSignUp: !isSignUp, errors: [] });
   };
 
-  render() {
-    const { isSignUp } = this.state;
-
-    return (
-      <>
-      {/* <Navbar /> */}
+  return (
+    <>
       <Container>
         <br />
         <Row className="justify-content-center">
           <Col md={6}>
-            <Form onSubmit={this.handleSubmit}>
-            {error && <div className="alert alert-danger">{error}</div>}
+            {errors.length > 0 && (
+              <div className="alert alert-danger">
+                <ul>
+                  {errors.map((error, index) => (
+                    <li key={index}>{error}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <Form onSubmit={handleSubmit}>
               {isSignUp && (
                 <>
                   <Form.Group controlId="name">
@@ -123,32 +123,32 @@ class SignUpLoginComponent extends Component {
                     <Form.Control
                       type="text"
                       name="name"
-                      value={this.state.name}
-                      onChange={this.handleChange}
+                      value={name}
+                      onChange={handleChange}
                       required
                     />
                   </Form.Group>
                   <Form.Group controlId="gender">
-                  <Form.Label>Gender</Form.Label>
-                  <Form.Control
-                    as="select"
-                    name="gender"
-                    value={this.state.gender}
-                    onChange={this.handleChange}
-                    required
-                  >
-                    <option value="">Select Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                  </Form.Control>
-                </Form.Group>
+                    <Form.Label>Gender</Form.Label>
+                    <Form.Control
+                      as="select"
+                      name="gender"
+                      value={gender}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </Form.Control>
+                  </Form.Group>
                   <Form.Group controlId="age">
                     <Form.Label>Age</Form.Label>
                     <Form.Control
                       type="number"
                       name="age"
-                      value={this.state.age}
-                      onChange={this.handleChange}
+                      value={age}
+                      onChange={handleChange}
                       required
                     />
                   </Form.Group>
@@ -157,8 +157,8 @@ class SignUpLoginComponent extends Component {
                     <Form.Control
                       type="number"
                       name="weight"
-                      value={this.state.weight}
-                      onChange={this.handleChange}
+                      value={weight}
+                      onChange={handleChange}
                       required
                     />
                   </Form.Group>
@@ -167,8 +167,8 @@ class SignUpLoginComponent extends Component {
                     <Form.Control
                       type="email"
                       name="email"
-                      value={this.state.email}
-                      onChange={this.handleChange}
+                      value={email}
+                      onChange={handleChange}
                       required
                     />
                   </Form.Group>
@@ -177,8 +177,8 @@ class SignUpLoginComponent extends Component {
                     <Form.Control
                       type="tel"
                       name="contact_number"
-                      value={this.state.contact_number}
-                      onChange={this.handleChange}
+                      value={contact_number}
+                      onChange={handleChange}
                       required
                     />
                   </Form.Group>
@@ -189,8 +189,8 @@ class SignUpLoginComponent extends Component {
                 <Form.Control
                   type="text"
                   name="username"
-                  value={this.state.username}
-                  onChange={this.handleChange}
+                  value={username}
+                  onChange={handleChange}
                   required
                 />
               </Form.Group>
@@ -199,37 +199,36 @@ class SignUpLoginComponent extends Component {
                 <Form.Control
                   type="password"
                   name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
+                  value={password}
+                  onChange={handleChange}
                   required
                 />
               </Form.Group>
               <br />
-                <Row>
-                  <Col className="text-left">
-                    <Button variant="primary" type="submit">
+              <Row>
+                <Col className="text-left">
+                  <Button variant="primary" type="submit">
                     {isSignUp ? "Sign Up" : "Login"}
-                    </Button>
-                  </Col>
-                  <Col className="text-right">
-                    <Button
+                  </Button>
+                </Col>
+                <Col className="text-right">
+                  <Button
                     variant="secondary"
-                    onClick={this.toggleForm}
+                    onClick={toggleForm}
                     className="ml-2"
-                    >
+                  >
                     {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
-                    </Button>
-                  </Col>
-                </Row>
-                <br />
+                  </Button>
+                </Col>
+              </Row>
+              <br />
             </Form>
           </Col>
         </Row>
       </Container>
       <br />
-      </>
-    );
-  }
+    </>
+  );
 }
 
 export default SignUpLoginComponent;

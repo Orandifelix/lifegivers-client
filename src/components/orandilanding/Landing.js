@@ -12,7 +12,7 @@ const Landing = () => {
     <>
       <div className="landing">
         <Landingimg />
-        <div class="cards-container">
+        <div className="cards-container">
           <div className="card card1">
             <h3>Join Us in Saving Lives</h3>
             <h4>Your Generosity Matters</h4>
@@ -36,7 +36,7 @@ const Landing = () => {
               <button>Sign In</button>
             </Link>
           </div>
-          <div class="card card3">
+          <div className="card card3">
             <img
               src="https://images.unsplash.com/photo-1508204841652-6c134d77ce0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
               alt="donor-avatar"
@@ -50,7 +50,7 @@ const Landing = () => {
               reminder of the incredible gift of life."
             </p>
           </div>
-          <div class="card card4">
+          <div className="card card4">
             <img
               src="https://images.unsplash.com/photo-1492462543947-040389c4a66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
               alt="give-avatar"

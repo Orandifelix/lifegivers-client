@@ -26,14 +26,14 @@ const Navbar = () => {
         <Link to="/types">
           <li>What you Can Donate</li>
         </Link>
-        <Link to="/">
+        <Link to="/donation_centers">
           <li>Where to Donate</li>
         </Link>
-        <Link to="/">
+        <Link to="/articles">
           <li>Articles</li>
         </Link>
         <Link to="/login">
-          <li>Become a Donor&#128578;</li>
+          <li>Become a Donor &#128578;</li>
         </Link>
       </ul>
     </nav>
