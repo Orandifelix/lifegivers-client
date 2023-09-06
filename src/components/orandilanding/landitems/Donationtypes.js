@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-// import { Link, useParams } from "react-router-dom";
 import "./Donationtypes.css";
 import DonationDetails from "./DonationDetails";
 
 const Donationtypes = () => {
-//   const { donationType } = useParams(); // Get the route parameter for donation type
   const [donationData, setDonationData] = useState("Blood Donation");
 
  
