@@ -5,6 +5,7 @@ import Navbar from './components/orandilanding/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Aboutus from './components/orandilanding/landitems/Aboutus';
 import Footer from './components/orandilanding/Footer';
+import Donationtypes from './components/orandilanding/landitems/Donationtypes';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<SignUpLoginComponent/>}/>
         <Route path='/' element={<Landing/>}/>
         <Route path='/aboutus' element={<Aboutus/>}/>
+        <Route path='/types' element={<Donationtypes/>} />
       </Routes>
       <hr className="horizontal-line"/>
       <Footer/>
