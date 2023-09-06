@@ -95,7 +95,7 @@ class SignUpLoginComponent extends Component {
   };
 
   toggleForm = () => {
-    this.setState((prevState) => ({ isSignUp: !prevState.isSignUp }));
+    this.setState((prevState) => ({ isSignUp: !prevState.isSignUp, errors: [] }));
   };
 
   render() {
