@@ -121,7 +121,7 @@
       "title": "Where to Donate",
       "description": "Explore our donation centers and facilities, located in different regions. Find a convenient location near you to make your contribution.",
       "image": "https://images.unsplash.com/photo-1591635579375-b3fadafc58ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-      "link": "/aboutus"
+      "link": "/donation_centers"
     },
     {
       "id": 4,
@@ -142,7 +142,7 @@
       "title": "Donating During Coronavirus",
       "description": "Get information on how we have adapted our donation processes to ensure safety during the COVID-19 pandemic. Learn about the precautions we take to protect donors and recipients.",
       "image": "https://images.unsplash.com/photo-1616390865493-ef36c0680870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
-      "link": "/aboutus"
+      "link": "/login"
     }
   ],
   "faqs": [
