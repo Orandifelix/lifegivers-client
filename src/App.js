@@ -7,6 +7,8 @@ import Aboutus from './components/orandilanding/landitems/Aboutus';
 import Footer from './components/orandilanding/Footer';
 import DonationCenter from './components/susandonationcenter/DonationCenter.js';
 import DonationCenterList from './components/susandonationcenter/DonationCenterList.js';
+import WhoCanDonate from './components/susandonors/WhoCanDonate.js';
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path='/aboutus' element={<Aboutus/>}/>
         <Route path='/wheretodonate' element={<DonationCenterList/>}/>
         <Route path="/wheretodonate/:id" element={<DonationCenter />} />
+        <Route path='/whocandonate' element={<WhoCanDonate />} />
       </Routes>
       <hr className="horizontal-line"/>
       <Footer/>
