@@ -14,7 +14,8 @@ class SignUpLoginComponent extends Component {
       weight: "",
       email: "",
       contact_number: "",
-      isSignUp: true, // To toggle between signup and login forms
+      isSignUp: true,
+      error: null,
     };
   }
 
@@ -23,63 +24,79 @@ class SignUpLoginComponent extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    if (this.state.isSignUp) {
-      // Handle signup
-      const userData = {
-        user: {
+    try {
+      if (this.state.isSignUp) {
+        const userData = {
+          user: {
+            username: this.state.username,
+            password: this.state.password,
+            name: this.state.name,
+            gender: this.state.gender,
+            age: this.state.age,
+            weight: this.state.weight,
+            email: this.state.email,
+            contact_number: this.state.contact_number,
+          },
+        };
+
+        const response = await fetch('http://localhost:3000/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.message || 'Failed to sign up');
+        }
+
+        // Reset form and clear errors on success
+        this.setState({
+          name: "",
+          gender: "",
+          age: "",
+          weight: "",
+          email: "",
+          contact_number: "",
+          error: null,
+        });
+
+        console.log('Sign up successful');
+      } else {
+        const loginData = {
           username: this.state.username,
           password: this.state.password,
-          name: this.state.name,
-          gender: this.state.gender,
-          age: this.state.age,
-          weight: this.state.weight,
-          email: this.state.email,
-          contact_number: this.state.contact_number,
-        },
-      };      
-      console.log(userData);
-      fetch('http://localhost:3000/users', {
-        method: 'POST',
-        headers: {
-         'Content-Type': 'application/json', // Specify JSON content type
-        },
-        body: JSON.stringify(userData),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            })
-        .catch((error) => {
-            console.error('Error:', error);
-    });
+        };
 
-    } else {
-      // Handle login
-      const loginData = {
-        username: this.state.username,
-        password: this.state.password,
-      };
-      fetch('http://localhost:3000/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(loginData),
-        })
-        .then((response) => {
-    if (!response.ok) {
-      // Handle the case where the response status is not in the range 200-299
-      throw new Error(`Request failed with status ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+        const response = await fetch('http://localhost:3000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(loginData),
+        });
 
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.message || 'Failed to log in');
+        }
+
+        // Reset form and clear errors on success
+        this.setState({
+          password: "",
+          error: null,
+        });
+
+        console.log('Log in successful');
+      }
+    } catch (error) {
+      // Handle and store errors
+      this.setState({ error: error.message });
+      console.error('Error:', error);
     }
   };
 
@@ -98,6 +115,7 @@ class SignUpLoginComponent extends Component {
         <Row className="justify-content-center">
           <Col md={6}>
             <Form onSubmit={this.handleSubmit}>
+            {error && <div className="alert alert-danger">{error}</div>}
               {isSignUp && (
                 <>
                   <Form.Group controlId="name">
