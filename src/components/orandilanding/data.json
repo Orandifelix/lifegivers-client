@@ -111,10 +111,10 @@
     },
     {
       "id": 2,
-      "title": "Who Can Donate",
+      "title": "What you Can Donate",
       "description": "Discover who is eligible to become a donor and how you can contribute to our life-saving efforts. Find out if you meet the requirements to make a difference.",
       "image": "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1451&q=80",
-      "link": "/aboutus"
+      "link": "/types"
     },
     {
       "id": 3,
