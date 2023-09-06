@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 function DonationCenterList() {
   const [donationCenters, setDonationCenters] = useState([]);
-  const [error, setError] = useState(null); // State to hold error information
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/donation_centers') // Replace with the actual API endpoint
+    fetch('http://localhost:3000/donation_centers')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -15,20 +15,23 @@ function DonationCenterList() {
       .then((data) => setDonationCenters(data))
       .catch((err) => {
         console.error('Error fetching data:', err);
-        setError(err); // Set the error state
+        setError(err);
       });
   }, []);
 
   return (
-    <div>
-      <h1>Donation Centers</h1>
-      {error ? ( // Render an error message if there's an error
-        <p>Error: {error.message}</p>
+    <div className="container">
+      <h1 className="my-4">Donation Centers</h1>
+      {error ? (
+        <div className="alert alert-danger" role="alert">
+          Error: {error.message}
+        </div>
       ) : (
-        <ul>
+        <ul className="list-group">
           {donationCenters.map((center) => (
-            <li key={center.id}>
-              {center.name} - {center.location}
+            <li key={center.id} className="list-group-item">
+              <h5 className="mb-0">{center.name}</h5>
+              <p className="mb-1">{center.location}</p>
             </li>
           ))}
         </ul>
@@ -38,3 +41,4 @@ function DonationCenterList() {
 }
 
 export default DonationCenterList;
+
