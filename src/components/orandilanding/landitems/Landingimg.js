@@ -12,7 +12,7 @@ const Landingimg = () => {
       </div>
       <div className="caption">
         <h1>
-          Be the Lifeline: Donate to Give Hope, Save Lives, and Make a Lasting
+          <span>Be the Lifeline:</span> <br/> Donate to Give Hope, Save Lives, and Make a Lasting
           Impact
         </h1>
       </div>

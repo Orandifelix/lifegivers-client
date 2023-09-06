@@ -23,9 +23,11 @@ nav {
 
 .logo h1 {
   margin-left: 20%;
+  font-weight: 600;
 }
 .logo h3 {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .links {
@@ -212,4 +214,136 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;  
+  padding: 1.5%;
+  background-color: #faf9f9;
 }
+
+
+.landing-card-link {
+  background-color: #f3efef;
+  border-radius: 10px;
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+.landing-card-link:hover {
+  color: #ff4242;
+  /* text-decoration: underline;  */
+  background-color: rgb(217,238,247);
+}
+
+.landing-card h4{
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.landing-card p{
+  margin: auto;
+  font-size: 01rem;
+  font-weight: 300;
+}
+
+.landing-card img{
+ padding: 0%;
+
+}
+
+
+/* first cards */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 2fr;
+  gap: 20px; 
+  padding: 3%;
+ 
+}
+
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s; 
+  cursor: pointer;
+  padding: 10px;
+}
+
+.card img{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+
+.card:hover {
+  transform: scale(98%) translateZ(0); 
+}
+
+
+.card h3{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: auto;
+}
+
+.card h4{
+  font-size: 1rem;
+  font-weight: 600;
+  margin: auto;
+  padding: 1%;
+}
+
+.card p{
+  font-size: 1rem;
+  margin: auto;
+}
+.card1{
+  background-color: rgb(249,225,222);
+}
+
+.card1 button{
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-weight: 600;
+  width: 90%;
+}
+
+.card1 button:hover{
+  background-color: rgb(165, 2, 2);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.card2{
+  background-color: rgb(217,238,247);
+}
+
+.card2 button{
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-weight: 600;
+  width: 90%;
+}
+
+.card2 button:hover{
+  background-color: rgb(1, 1, 153);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-weight: 600;
+}
+
+

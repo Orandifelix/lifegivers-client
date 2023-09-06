@@ -7,7 +7,6 @@ const Navbar = () => {
   return (
     <nav>
       <div className="logo">
-        <div></div>
         <span>
           <RiHandHeartFill size="2em" color="rgb(216,30,5)" />
         </span>

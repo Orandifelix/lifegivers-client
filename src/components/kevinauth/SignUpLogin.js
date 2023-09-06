@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-// import Navbar from "../orandilanding/Navbar";
 
 class SignUpLoginComponent extends Component {
   constructor(props) {
