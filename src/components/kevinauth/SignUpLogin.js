@@ -24,66 +24,69 @@ class SignUpLoginComponent extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = async (event) => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    try {
-      if (this.state.isSignUp) {
-        // Handle signup
-        const userData = {
-          user: {
-            username: this.state.username,
-            password: this.state.password,
-            name: this.state.name,
-            gender: this.state.gender,
-            age: this.state.age,
-            weight: this.state.weight,
-            email: this.state.email,
-            contact_number: this.state.contact_number,
-          },
-        };
-        
-        const response = await fetch('http://localhost:3000/users', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userData),
-        });
 
-        if (!response.ok) {
-          // Handle the case where the response status is not in the range 200-299
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log(data);
-      } else {
-        // Handle login
-        const loginData = {
+    if (this.state.isSignUp) {
+      // Handle signup
+      const userData = {
+        user: {
           username: this.state.username,
           password: this.state.password,
-        };
-        
-        const response = await fetch('http://localhost:3000/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(loginData),
+          name: this.state.name,
+          gender: this.state.gender,
+          age: this.state.age,
+          weight: this.state.weight,
+          email: this.state.email,
+          contact_number: this.state.contact_number,
+        },
+      };
+
+      fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          // Handle and store errors
+          this.setState({ error: error.message });
+          console.error('Error:', error);
         });
+    } else {
+      // Handle login
+      const loginData = {
+        username: this.state.username,
+        password: this.state.password,
+      };
 
-        if (!response.ok) {
-          // Handle the case where the response status is not in the range 200-299
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log(data);
-      }
-    } catch (error) {
-      // Handle and store errors
-      this.setState({ error: error.message });
-      console.error('Error:', error);
+      fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.error) {
+            // Handle custom error message from the backend
+            this.setState({ error: data.error });
+          } else {
+            // Login successful, do something with data
+            console.log(data);
+          }
+        })
+        .catch((error) => {
+          // Handle and store errors
+          this.setState({ error: error.message });
+          console.error('Error:', error);
+        });
     }
   };
 
@@ -100,6 +103,7 @@ class SignUpLoginComponent extends Component {
           <br />
           <Row className="justify-content-center">
             <Col md={6}>
+              {error && <div className="alert alert-danger">{error}</div>}
               <Form onSubmit={this.handleSubmit}>
                 {isSignUp && (
                   <>
@@ -208,7 +212,6 @@ class SignUpLoginComponent extends Component {
                 </Row>
                 <br />
               </Form>
-              {error && <div className="alert alert-danger">{error}</div>}
             </Col>
           </Row>
         </Container>
