@@ -57,6 +57,7 @@ class SignUpLoginComponent extends Component {
           } else {
             // Signup successful, do something with data
             console.log(data);
+            this.setState((prevState) => ({ isSignUp: !prevState.isSignUp, errors: [] }));
           }
         })
         .catch((error) => {
