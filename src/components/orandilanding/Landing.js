@@ -4,6 +4,7 @@ import Landingimg from "./landitems/Landingimg";
 import Landingcard from "./landitems/Landingcard";
 import SectionData from "./data.json";
 import { Link } from "react-router-dom";
+import Faq from "./Faq";
 
 const Landing = () => {
   const sections = SectionData.sections;
@@ -78,6 +79,7 @@ const Landing = () => {
           ))}
         </div>
       </div>
+      <Faq/>
     </>
   );
 };

@@ -106,7 +106,7 @@
       "id": 1,
       "title": "Who We Are",
       "description": "At LifeGivers, we are a dedicated team of individuals committed to saving lives through various life-giving services. Learn more about our mission and values.",
-      "image": "https://images.unsplash.com/photo-1612277795259-607df5c06e6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "image": "https://images.unsplash.com/photo-1590105577767-e21a1067899f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80",
       "link": "/aboutus"
     },
     {
@@ -143,6 +143,43 @@
       "description": "Get information on how we have adapted our donation processes to ensure safety during the COVID-19 pandemic. Learn about the precautions we take to protect donors and recipients.",
       "image": "https://images.unsplash.com/photo-1616390865493-ef36c0680870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
       "link": "/aboutus"
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is LifeGivers?",
+      "answer": "LifeGivers is a dedicated organization committed to saving lives through various life-giving services. Our mission is to provide a vital lifeline through blood donation, organ transplantation, tissue preservation, cord blood banking, bone marrow transplants, platelet therapies, and more."
+    },
+    {
+      "id": 2,
+      "question": "How can I become a donor?",
+      "answer": "To become a donor, you can check our eligibility requirements on our website. If you meet the criteria, you can sign up and choose the donation type you'd like to participate in."
+    },
+    {
+      "id": 3,
+      "question": "Where can I donate?",
+      "answer": "We have donation centers and facilities located in different regions. You can find a convenient location near you on our website."
+    },
+    {
+      "id": 4,
+      "question": "When can I donate?",
+      "answer": "We have donation schedules that you can check on our website. We offer flexible timings to accommodate your busy life."
+    },
+    {
+      "id": 5,
+      "question": "What impact do my donations have?",
+      "answer": "Your donations have a significant impact on saving lives. They provide essential resources like blood, organs, tissues, and more to those in need. You make a world of difference."
+    },
+    {
+      "id": 6,
+      "question": "How can I donate during the COVID-19 pandemic?",
+      "answer": "We have adapted our donation processes to ensure safety during the COVID-19 pandemic. Learn about the precautions we take to protect donors and recipients on our website."
+    },
+    {
+      "id": 7,
+      "question": "Can I donate if I have a medical condition?",
+      "answer": "It depends on the medical condition. Some conditions may disqualify you from certain types of donation, while others may not. Check our eligibility criteria and consult with our medical team for specific guidance."
     }
   ]
 }
