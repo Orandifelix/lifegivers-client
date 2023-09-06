@@ -62,14 +62,24 @@ class SignUpLoginComponent extends Component {
         password: this.state.password,
       };
       fetch('http://localhost:3000/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(loginData),
-    }).then((response) => {
-        response.json().then((data) => {
-          console.log(data);
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(loginData),
         })
-    })
+        .then((response) => {
+    if (!response.ok) {
+      // Handle the case where the response status is not in the range 200-299
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
     }
   };
 
