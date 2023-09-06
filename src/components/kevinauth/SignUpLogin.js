@@ -15,7 +15,7 @@ class SignUpLoginComponent extends Component {
       email: "",
       contact_number: "",
       isSignUp: true,
-      error: null, // Define the error variable in your state
+      errors: [], // Define an errors array in your state
     };
   }
 
@@ -51,11 +51,16 @@ class SignUpLoginComponent extends Component {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          if (data.errors) {
+            // Handle errors from the backend
+            this.setState({ errors: data.errors });
+          } else {
+            // Signup successful, do something with data
+            console.log(data);
+          }
         })
         .catch((error) => {
-          // Handle and store errors
-          this.setState({ error: error.message });
+          // Handle and store other errors
           console.error('Error:', error);
         });
     } else {
@@ -76,15 +81,14 @@ class SignUpLoginComponent extends Component {
         .then((data) => {
           if (data.error) {
             // Handle custom error message from the backend
-            this.setState({ error: data.error });
+            this.setState({ errors: [data.error] });
           } else {
             // Login successful, do something with data
             console.log(data);
           }
         })
         .catch((error) => {
-          // Handle and store errors
-          this.setState({ error: error.message });
+          // Handle and store other errors
           console.error('Error:', error);
         });
     }
@@ -95,7 +99,7 @@ class SignUpLoginComponent extends Component {
   };
 
   render() {
-    const { isSignUp, error } = this.state;
+    const { isSignUp, errors } = this.state;
 
     return (
       <>
@@ -103,7 +107,15 @@ class SignUpLoginComponent extends Component {
           <br />
           <Row className="justify-content-center">
             <Col md={6}>
-              {error && <div className="alert alert-danger">{error}</div>}
+              {errors.length > 0 && (
+                <div className="alert alert-danger">
+                  <ul>
+                    {errors.map((error, index) => (
+                      <li key={index}>{error}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <Form onSubmit={this.handleSubmit}>
                 {isSignUp && (
                   <>
