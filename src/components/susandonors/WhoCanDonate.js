@@ -3,12 +3,12 @@ import React from 'react';
 const WhoCanDonate = () => {
   return (
     <div>
-      <h2>Who Can Donate Platelets</h2>
+      <h2>Who Can Donate Blood</h2>
       <p>
-        By becoming a platelet donor, you can join a community of active donors across England who save lives every day.
+        By becoming a  donor, you can join a community of active donors across the country who save lives every day.
       </p>
       <p>
-        You may be able to donate platelets if you have the right blood type, a high enough platelet count, and have given blood before.
+        You may be able to donate if you have the right blood type, a high enough platelet count, and have given blood before.
       </p>
       <p>
         We'd like to hear from you if you:
