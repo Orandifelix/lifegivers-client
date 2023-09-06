@@ -1,6 +1,6 @@
 import "./App.css";
 import SignUpLoginComponent from "./components/kevinauth/SignUpLogin";
-import Landing from "./components/orandilanding/Landing";
+import Articles from "./components/leila /articles";
 import Navbar from "./components/orandilanding/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Aboutus from "./components/orandilanding/landitems/Aboutus";
@@ -11,6 +11,7 @@ import DonationCenterUpdate from "./components/kevinauth/DonationCenterUpdate";
 import DonationCenterCreate from "./components/kevinauth/DonationCenterCreate";
 
 import Donationtypes from "./components/orandilanding/landitems/Donationtypes";
+import Landing from "./components/orandilanding/Landing";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<SignUpLoginComponent />} />
         <Route path="/donation_centers" element={<DonationCenterList />} />
+        <Route  path="/" element={<Landing/>}/>
         <Route
           path="/donation_centers/update"
           element={<DonationCenterUpdate />}
@@ -29,7 +31,7 @@ function App() {
         />
         <Route path="/aboutus" element={<Aboutus />} />
 
-        <Route path="/" element={<Landing />} />
+        <Route path="/articles" element={<Articles />} />
 
         <Route path="/types" element={<Donationtypes />} />
       </Routes>
