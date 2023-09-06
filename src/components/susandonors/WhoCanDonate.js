@@ -25,10 +25,6 @@ const WhoCanDonate = () => {
       <p>
         You need to have enough blood to donate platelets safely.
       </p>
-      <p>
-        Use this tool to check if you have enough blood to donate. This calculation uses your gender, height, and weight but is different from BMI (body mass index).
-      </p>
-      {/* Add form or tool for checking blood */}
     </div>
   );
 };
