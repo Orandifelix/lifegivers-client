@@ -139,7 +139,7 @@ const Donationtypes = () => {
       <div className="donation-container">
         <div className="text-container">
           <h3 className="donation-text">
-            "Thank you for becoming a part of this profound mission. Your
+            "Thank you for becoming part of this profound mission. Your
             contribution has the power to transform not just one life, but
             countless others. Together, we can be the beacon of hope, the
             lifeline of change, and the guardian of countless dreams. Your
