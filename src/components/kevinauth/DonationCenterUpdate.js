@@ -92,9 +92,11 @@ function DonationCenterUpdate() {
 
   useEffect(() => {
     // Fetch the list of donation centers
-    fetch('http://localhost:3000/donation_centers')
+    fetch('https://lifegivers-server.onrender.com/donation_centers')
       .then((response) => response.json())
-      .then((data) => setCenters(data));
+      .then((data) => setCenters(data)).catch((error) => {
+        console.error('Error fetching data:', error);
+      })
   }, []);
 
   return (

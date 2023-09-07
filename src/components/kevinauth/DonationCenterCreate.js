@@ -19,7 +19,7 @@ function DonationCenterCreate() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/donation_centers', {
+      const response = await fetch('https://lifegivers-server.onrender.com/donation_centers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

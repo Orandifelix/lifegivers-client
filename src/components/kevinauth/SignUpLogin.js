@@ -42,7 +42,7 @@ function SignUpLoginComponent() {
         },
       };
 
-      fetch('http://localhost:3000/users', {
+      fetch('https://lifegivers-server.onrender.com/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function SignUpLoginComponent() {
         password,
       };
 
-      fetch('http://localhost:3000/login', {
+      fetch('https://lifegivers-server.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -6,7 +6,7 @@ function DonationCenterList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/donation_centers')
+    fetch('https://lifegivers-server.onrender.com/donation_centers')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
