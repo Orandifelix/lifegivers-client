@@ -1,0 +1,32 @@
+[
+    {
+      "title": " 1",
+      "content":   "Last summer, I decided to become an organ donor after hearing about Emma, a young girl in desperate need of a heart transplant. Witnessing her struggle touched my heart, and I knew I had to help. Today, I carry Emma's heartbeat within me, a constant reminder of the incredible gift of life.",
+      "donor_name": "Sarah Adams",
+      "donation_type_id": 1,
+      "donation_photo":   "https://images.unsplash.com/photo-1508204841652-6c134d77ce0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "author": "Author 1",
+      "created_at": "2023-09-07T10:00:00Z",
+      "updated_at": "2023-09-07T10:00:00Z"
+    },
+    {
+      "title": " 2",
+      "content": "I made a life-changing decision last year to donate my bone marrow when I learned about Liam, a boy battling leukemia. I got tested and discovered I was a match. The day of the transplant felt like magic. Months later, Liam thrives, and we share an unbreakable bond. I've learned that one act of kindness can have a ripple effect, touching countless lives. My journey with Liam has forever changed me, teaching me the true meaning of compassion.",
+      "donor_name":  "Don Mugendi",
+      "donation_type_id": 2,
+      "donation_photo":   "https://images.unsplash.com/photo-1492462543947-040389c4a66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "author": "Author 2",
+      "created_at": "2023-09-07T11:00:00Z",
+      "updated_at": "2023-09-07T11:00:00Z"
+    },
+    {
+      "title": "3",
+      "content": "Teaching in an underprivileged school has been my calling. One day, I met Daniel, a bright but disadvantaged student with dreams as big as the sky. His determination to learn inspired me to go the extra mile. Today, Daniel is a successful engineer, and I couldn't be prouder. The impact of a dedicated teacher can change the course of a child's life.",
+      "donor_name": "Emily Turner",
+      "donation_type_id": 1,
+      "donation_photo":  " https://images.unsplash.com/photo-1445053023192-8d45cb66099d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YSUyMGxhZHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "created_at": "2023-09-07T12:00:00Z",
+      "updated_at": "2023-09-07T12:00:00Z"
+    }
+  ]
+  
