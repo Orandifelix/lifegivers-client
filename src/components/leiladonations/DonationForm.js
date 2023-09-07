@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-
+import { Link } from 'react-router-dom';
 class DonationForm extends Component {
   constructor(props) {
     super(props);
@@ -128,9 +128,11 @@ class DonationForm extends Component {
               <br />
               <Row>
                 <Col className="text-left">
-                  <Button variant="primary" type="submit">
-                    Submit Donation
-                  </Button>
+                <Link to="/articles1">
+  <Button variant="primary" type="submit">
+    Submit Donation
+  </Button>
+</Link>
                 </Col>
               </Row>
               <br />

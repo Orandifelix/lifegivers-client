@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 
-class Article extends Component {
+class Article1 extends Component {
   constructor(props) {
     super(props);
 
@@ -13,6 +13,7 @@ class Article extends Component {
       donation_photo: "",
       author: "",
       errors: [],
+      successMessage: "",
     };
   }
 
@@ -24,25 +25,31 @@ class Article extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Add your fetch request to submit the article data to your backend here
-    // You should replace the URL and add appropriate headers and error handling
     try {
-      const response = await fetch("YOUR_API_URL", {
+      const response = await fetch("http://localhost:3000/articles", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(this.state),
+        body: JSON.stringify({
+          article: { // Match the expected structure in your Rails controller
+            title: this.state.title,
+            content: this.state.content,
+            donor_name: this.state.donor_name,
+            donation_type_id: this.state.donation_type_id,
+            donation_photo: this.state.donation_photo,
+            author: this.state.author,
+          },
+        }),
       });
 
       if (response.ok) {
         // Article successfully submitted
-        console.log("Article submitted successfully");
+        this.setState({ successMessage: "Article submitted successfully" });
       } else {
         // Handle errors here
         const errorData = await response.json();
         this.setState({ errors: errorData.errors });
-        console.error("Article submission failed");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -50,13 +57,18 @@ class Article extends Component {
   };
 
   render() {
-    const { errors } = this.state;
+    const { errors, successMessage } = this.state;
 
     return (
       <Container>
         <br />
         <Row className="justify-content-center">
           <Col md={6}>
+            {successMessage && (
+              <div className="alert alert-success">
+                {successMessage}
+              </div>
+            )}
             {errors.length > 0 && (
               <div className="alert alert-danger">
                 <ul>
@@ -66,7 +78,7 @@ class Article extends Component {
                 </ul>
               </div>
             )}
-            <Form onSubmit={this.handleSubmit}>
+               <Form onSubmit={this.handleSubmit}>
               <Form.Group controlId="title">
                 <Form.Label>Title</Form.Label>
                 <Form.Control
@@ -149,4 +161,4 @@ class Article extends Component {
   }
 }
 
-export default Article;
+export default Article1;
