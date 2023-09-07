@@ -25,12 +25,18 @@ function Article1() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+  
     try {
+      // Fetch the CSRF token from the meta tag
+      const csrfToken = document
+        .querySelector('meta[name="csrf-token"]')
+        .getAttribute("content");
+  
       const response = await fetch("http://localhost:3000/articles", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "X-CSRF-Token": csrfToken, // Include the CSRF token in the headers
         },
         body: JSON.stringify({
           article: {

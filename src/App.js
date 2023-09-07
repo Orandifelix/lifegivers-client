@@ -1,6 +1,7 @@
 import React from "react";
 import SignUpLoginComponent from "./components/kevinauth/SignUpLogin";
-import Articles1 from "./components/leiladonations/articles1"; // Updated import path
+import Articles1 from "./components/leiladonations/articles1";
+import Articles from "./components/leiladonations/articles";  // Updated import path
 import Navbar from "./components/orandilanding/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Aboutus from "./components/orandilanding/landitems/Aboutus";
@@ -26,7 +27,8 @@ function App() {
         <Route path="/donation_centers/update" element={<DonationCenterUpdate />} />
         <Route path="/donation_centers/create" element={<DonationCenterCreate />} />
         <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/articles1" element={<Articles1 />} /> {/* Updated route */}
+        <Route path="/articles1" element={<Articles1 />} /> 
+        <Route path="/articles" element={<Articles />} /> 
         <Route path="/types" element={<Donationtypes />} />
       </Routes>
       <hr className="horizontal-line" />
