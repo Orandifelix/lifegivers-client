@@ -26,8 +26,8 @@ Create a user-friendly dashboard where donors can manage their preferences, trac
 LifeGivers is built using cutting-edge technologies to ensure a smooth and secure user experience:
 
 * Front-end: React JS
-* User Interface: CSS, bootstrap 5
-* Icons: React-Icons, Bootsrab icons
+* User Interface: CSS, Bootstrap 5
+* Icons: React-Icons, Bootsrap icons
 * Alerts: Sweetalert2
 * Back-end: Ruby on Rails 
 * Database: Postresql 
