@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import './DonationForm.css'; // Import your custom CSS file
+
 class DonationForm extends Component {
   constructor(props) {
     super(props);
@@ -78,12 +80,20 @@ class DonationForm extends Component {
               <Form.Group controlId="donationType">
                 <Form.Label>Donation Type</Form.Label>
                 <Form.Control
-                  type="text"
+                  as="select"
                   name="donationType"
                   value={this.state.donationType}
                   onChange={this.handleChange}
                   required
-                />
+                >
+                  <option value="">Select a Donation Type</option>
+                  <option value="Blood Donation">Blood Donation</option>
+                  <option value="Organ Donation">Organ Donation</option>
+                  <option value="Platelets Donation">Platelets Donation</option>
+                  <option value="Tissues Donation">Tissues Donation</option>
+                  <option value="Cord Blood Donation">Cord Blood Donation</option>
+                  <option value="Bone Marrow Donation">Bone Marrow Donation</option>
+                </Form.Control>
               </Form.Group>
               <Form.Group controlId="donationDate">
                 <Form.Label>Donation Date</Form.Label>
@@ -128,11 +138,11 @@ class DonationForm extends Component {
               <br />
               <Row>
                 <Col className="text-left">
-                <Link to="/articles1">
-  <Button variant="primary" type="submit">
-    Submit Donation
-  </Button>
-</Link>
+                  <Link to="/articles1">
+                    <Button variant="primary" type="submit">
+                      Submit Donation
+                    </Button>
+                  </Link>
                 </Col>
               </Row>
               <br />
