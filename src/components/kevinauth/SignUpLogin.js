@@ -86,7 +86,7 @@ function SignUpLoginComponent() {
           } else {
             // Login successful
             console.log(data);
-            nav('/');
+            nav('/DonationForm');
           }
         })
         .catch((error) => {
