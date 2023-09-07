@@ -56,7 +56,8 @@ function SignUpLoginComponent() {
             setFormData({ ...formData, errors: data.errors });
           } else {
             // Signup successful, do something with data
-            console.log(data);
+            // console.log(data);
+            localStorage.setItem('user', data)
             setFormData({ ...formData, isSignUp: !isSignUp, errors: [] });
           }
         })

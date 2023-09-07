@@ -1,22 +1,34 @@
-import React from "react";
+import React, { useState, createContext } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import SignUpLoginComponent from "./components/kevinauth/SignUpLogin";
 import Articles1 from "./components/leiladonations/articles1";
-import Articles from "./components/leiladonations/articles";  // Updated import path
+import Articles from "./components/leiladonations/articles";
 import Navbar from "./components/orandilanding/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Aboutus from "./components/orandilanding/landitems/Aboutus";
 import Footer from "./components/orandilanding/Footer";
-import DonationForm from "./components/leiladonations/DonationForm"; // Updated import without .js extension
-
+import DonationForm from "./components/leiladonations/DonationForm";
 import DonationCenterList from "./components/kevinauth/DonationCenterList";
 import DonationCenterUpdate from "./components/kevinauth/DonationCenterUpdate";
 import DonationCenterCreate from "./components/kevinauth/DonationCenterCreate";
-
 import Donationtypes from "./components/orandilanding/landitems/Donationtypes";
 import Landing from "./components/orandilanding/Landing";
 
+const context = createContext()
+
 function App() {
+  const [user, setUser] = useState()
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setUser(foundUser);
+    }
+  }, []);
+
   return (
+    <context.Provider value= {[user, setUser]}>
     <Router className="App">
       <Navbar />
       <Routes>
@@ -34,6 +46,7 @@ function App() {
       <hr className="horizontal-line" />
       <Footer />
     </Router>
+    </context.Provider>
   );
 }
 
