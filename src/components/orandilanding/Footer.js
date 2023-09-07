@@ -48,12 +48,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="donation-links">
-        <button className="donation-button blood">Blood</button>
-        <button className="donation-button organs">Organs</button>
-        <button className="donation-button tissues">Tissues</button>
-        <button className="donation-button platelets">Platelets</button>
-        <button className="donation-button cord-blood">Cord Blood</button>
-        <button className="donation-button bone-marrow">Bone Marrow</button>
+      <a href="/types" className="donation-button blood">Blood</a>
+        <a href="/types" className="donation-button organs">Organs</a>
+        <a href="/types" className="donation-button tissues">Tissues</a>
+        <a href="/types" className="donation-button platelets">Platelets</a>
+        <a href="/types" className="donation-button cord-blood">Cord Blood</a>
+        <a href="/types" className="donation-button bone-marrow">Bone Marrow</a>
       </div>
       <div className="copyright">
         &copy; LifeGivers {new Date().getFullYear()}
