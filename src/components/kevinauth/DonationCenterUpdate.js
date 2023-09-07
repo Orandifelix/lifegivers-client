@@ -36,7 +36,7 @@ function DonationCenterUpdate() {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:3000/donation_centers/${selectedCenterId}`, {
+      const response = await fetch(`https://lifegivers-server.onrender.com/donation_centers/${selectedCenterId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function DonationCenterUpdate() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to update the donation center');
+        throw new Error(errorData.message || 'Not authorized');
       }
 
       setFormData({
@@ -67,13 +67,13 @@ function DonationCenterUpdate() {
     if (!selectedCenterId) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/donation_centers/${selectedCenterId}`, {
+      const response = await fetch(`https://lifegivers-server.onrender.com/donation_centers/${selectedCenterId}`, {
         method: 'DELETE',
       });
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to delete the donation center');
+        throw new Error(errorData.message || 'Not authorized');
       }
 
       setFormData({
